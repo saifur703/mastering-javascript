@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+
+<body>
+    <h2>Two kind of Data Types</h2>
+    <ul>
+        <li>Primitive Data Type
+            <ul>
+                <li>string</li>
+                <li>number</li>
+                <li>boolean</li>
+                <li>null</li>
+                <li>undefined</li>
+            </ul>
+        </li>
+        <li>Complex Data Type
+            <ul>
+                <li>object</li>
+                <li>array</li>
+                <li>function</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        // Primitive 
+        let x = 10;
+        let y = x;
+        y = 15;
+        console.log("x: ", x, "y: ", y);
+
+
+        // Complex 
+        let obj = {
+            x: 32,
+            y: 99
+        }
+        let anotherObj = obj;
+        anotherObj.x = "Saifur";
+        console.log("another object: ", anotherObj.x);
+        console.log("Object: ", obj.x);
+    </script>
+</body>
+
+</html>
