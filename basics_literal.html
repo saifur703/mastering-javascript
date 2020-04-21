@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Literal</title>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+        const s1 = "Hello";
+        console.log(typeof s1, s1.toUpperCase());
+
+        const s2 = new String("Hello");
+        console.log(typeof s2, s2.toUpperCase());
+
+        console.log(window);
+
+        const book1 = {
+            title: "Book One",
+            author: "S Rahman",
+            year: 2019,
+            getSummery: function () {
+                return `"${this.title}" was written by ${this.author} in ${this.year}`;
+            }
+        }
+        console.log(book1.getSummery())
+
+        const book2 = {
+            title: "Book Two",
+            author: "Saifur Rahman",
+            year: 2020,
+            getSummery: function () {
+                return `"${this.title}" was written by ${this.author} in ${this.year}`;
+            }
+        }
+        console.log(Object.values(book2))
+        console.log(Object.keys(book2));
+    </script>
+</body>
+
+</html>
