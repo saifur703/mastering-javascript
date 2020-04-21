@@ -16,3 +16,14 @@ do {
   console.log(i3, 'Hello do while loop');
   i3++;
 } while (i3 <= 10);
+
+// for of loop
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+for (let i of arr) {
+  console.log(i);
+}
+
+// forEach loop
+const arrOutput = arr.forEach((cb) => {
+  console.log('ForEach: ', cb);
+});
