@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callback</title>
+</head>
+
+<body>
+
+
+  <script type="text/javascript">
+    const posts = [{
+        title: 'Title One',
+        body: 'Body Text One'
+      },
+      {
+        title: 'Title Two',
+        body: 'Body Text Two'
+      },
+      {
+        title: 'Title Three',
+        body: 'Body Text Two'
+      },
+    ];
+
+    function getPosts() {
+      setTimeout(() => {
+        let output = '';
+        posts.map((post, index) => {
+          output += `<li>${post.title}</li>`;
+        });
+        document.body.innerHTML = output;
+      }, 1000);
+    }
+
+    function createPost(post, callback) {
+      setTimeout(() => {
+        posts.push(post);
+        callback();
+      }, 2000);
+    }
+
+    createPost({
+      title: "My Another Post",
+      body: "Body another"
+    }, getPosts)
+
+    createPost({
+      title: "My Another Post 2",
+      body: "Body another 2"
+    }, getPosts)
+  </script>
+</body>
+
+</html>
